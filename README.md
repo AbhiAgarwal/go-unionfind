@@ -11,3 +11,24 @@ A quick implementation of Union-Find in Go.
 	- Disjoint-set data structures model the partitioning of a set, for example to keep track of the connected components of an undirected graph.
 	- This model can then be used to determine whether two vertices belong to the same component, or whether adding an edge between them would result in a cycle.
 	- The Union–Find algorithm is used in high-performance implementations of unification.
+
+Simple Program
+
+```
+go get github.com/AbhiAgarwal/go-unionfind
+```
+
+```go
+package main
+
+import (
+	"fmt"
+	unionfind "github.com/AbhiAgarwal/go-unionfind"
+)
+
+func main(){
+	union := unionfind.NewUnionFind()
+	union.UnionFind(4)
+	fmt.Println(union.NumSets)
+}
+```
